@@ -4,6 +4,7 @@ import RemarkMath from 'remark-math'
 import RehypeKatex from 'rehype-katex'
 import { BlockMath, InlineMath } from 'react-katex'
 import 'katex/dist/katex.min.css'
+import "./fraction-notequal.css"
 
 const _mapProps = (props) => ({
   ...props,

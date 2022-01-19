@@ -12,18 +12,90 @@ Example of working and non-working parts
 
 
 <Katex>{`
-Below is an example of a formula
+Simple example shows the fraction bar doesn't extend like it is suppose to:
+$$ 
+\\frac{1}{a^2 + b^2 + c^2} 
 $$
-s = ut + 1/2 \\cdot at^{2}
+More complicated fractions don't work at all, with the bar crossing out letters: for example the standard normal:
 $$
-Or it can work inline $$b^2$$.
-However! There are certain parts that do not work!
-For example, fraction bars do not show up: 
+f(x) = \\frac{1}{\\sigma \\sqrt{2 \\pi}} e^{- \\frac{1}{2} \\left( \\frac{x - \\mu}{\\sigma} \\right)^2}
 $$
-\\frac{1}{2}
+or in taylor's where: 
 $$
-And the not equals sign does not work either 
+R_n = \\int_a^b \\frac{(b-t)^{n-1}}{(n-1)!} f^{(n)}(t) \\, dt
 $$
-0 \\neq 1
+Additionally, this had one of your fixes has led to random lines appearing elsewhere in the pages. Example below: 
+$$
+f_n(x) = \\begin{cases}
+0 & x \\leq 0 \\newline 
+nx & 0 \\leq x \\leq 1/n \\newline 
+1 & x \\geq 1/n
+\\end{cases}
+$$ 
+or here: 
+$$
+\\begin{align}
+&\\forall n \\geq N, |f_n(x) - f(x)| < \\epsilon/2 \\quad \\forall x \\in E \\newline 
+&\\Rightarrow \\sup_{x \\in E}(|f_n(x) - f(x)|) \\leq \\epsilon/2 < \\epsilon \\newline 
+&\\Rightarrow M_n < \\epsilon \\newline 
+&\\Rightarrow M_n \\rightarrow 0 \\quad \\text{as} \\quad n \\to \\infty 
+\\end{align}
+$$
+or here:
+$$
+\\begin{align}
+   (AB)C &= A(BC) \\newline
+   A(B+ C) &= AB + AC  & \\text{left distributive law} \\newline
+   (A + B)C &= AC + BC  & \\text{right distributive law} \\newline 
+   AB & \\neq BA   & \\text{except in special cases} \\newline 
+   AB = 0 & \\quad & \\text{does not imply that } A or B  is 0 \\newline
+   AB = AC & \\quad \\text{and} \\quad  A \\neq 0 & \\text{do not imply that } B = C
+\\end{align}
+$$
+$$
+\\begin{align}
+& (\\mathbf{A^T})^T = \\mathbf{A} \\newline
+& (\\mathbf{A} + \\mathbf{B})^T = \\mathbf{A}^T + \\mathbf{B}^T  \\newline 
+& (\\alpha \\mathbf{A})^T = \\alpha \\mathbf{A}^T \\newline 
+& (\\mathbf{AB})^T = \\mathbf{B}^T \\mathbf{A}^T
+\\end{align}
+$$
+$$ 
+\\begin{align}
+& | \\mathbf{A}^T  | = | \\mathbf{A} | \\newline 
+& | \\mathbf{AB} | = | \\mathbf{A} | \\cdot |\\mathbf{B} | \\newline 
+& | \\mathbf{A + B } | \\neq |\\mathbf{A}| + |\\mathbf{B}| \\quad \\text{usually} 
+\\end{align}
+$$
+$$ 
+\\begin{align}
+& (\\mathbf{A}^{-1})^{-1} = \\mathbf{A} \\newline 
+& (\\mathbf{AB}^{-1}) = \\mathbf{B^{-1}A^{-1}} \\newline 
+& (\\mathbf{A}^T)^{-1} = (\\mathbf{A}^{-1})^T \\newline 
+& (k \\mathbf{A})^{-1} = k^{-1} \\mathbf{A}^{-1} 
+\\end{align}
+$$
+$$ 
+\\begin{pmatrix}
+1 & 2 & 2 & 1 \\newline
+0 & 2 & 4 & 2 \\newline
+0 & 2 & 2 & 1
+\\end{pmatrix}
 $$
 `}</Katex>
+
+<Katex>{`
+$$
+Q(x_1, \\dots , x_n) = \\sum_{i= 1}^n \\sum_{j = 1}^n a_{ij}x_i x_j = t \\begin{pmatrix} 
+x_1 \\newline
+\\vdots \\newline
+x_3
+\\end{pmatrix} (a_{ij})_{n \\times n} \\begin{pmatrix}
+x_1 \\newline
+\\vdots  \\newline
+x_n 
+\\end{pmatrix}
+$$
+`}</Katex>
+
+
